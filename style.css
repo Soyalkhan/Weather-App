@@ -1,0 +1,77 @@
+body{
+    padding: 0;
+    margin: 0;
+    background-color: #2D9596;
+    font-family: "Open Sans", sans-serif;
+}
+.container{
+    display: grid;
+    justify-content: center;
+}
+.card{
+    height: 400px;
+    width: 300px;
+    padding: 5px;
+    background-color: #265073;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    box-shadow: 5px 5px black;
+    border: 2px solid #9AD0C2;
+    padding: 5px;
+    color: #F1FADA;
+    text-align: center;
+    line-height: 0.7;
+    font-weight: 100;
+}
+.card2{
+    margin-top: 20px;
+    height: 70px;
+    width: 310px;
+    background-color: #265073;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    border: 2px solid #9AD0C2;
+    box-shadow: 5px 5px black;
+}
+
+input{
+    height: 50px;
+    width: 100%;
+    border-top-left-radius: 17px;
+    border-top-right-radius: 17px;
+    border: none;
+    padding: 10px;
+    font-size: 17px;
+    background-color: transparent;
+    color: #F1FADA;
+    font-weight: 700;
+    border: 3px solid #2D9596;
+   
+}
+::placeholder{
+    color: #F1FADA;
+}
+.intarnal2{
+    padding: 10px;
+}
+.addtional{
+    margin-bottom: 20px;
+}
+.post{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    
+}
+td{
+    padding-left:15px;
+    padding-right:15px;
+    font-size: 18px;
+}
+tr{
+    padding-left:15px;
+    padding-right:15px;
+
+    font-size: 30px;
+    line-height: 2;
+}
