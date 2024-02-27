@@ -36,9 +36,9 @@ body{
 
 input{
     height: 50px;
-    width: 100%;
+    width: 80%;
     border-top-left-radius: 17px;
-    border-top-right-radius: 17px;
+    /* border-top-right-radius: 17px; */
     border: none;
     padding: 10px;
     font-size: 17px;
@@ -48,11 +48,23 @@ input{
     border: 3px solid #2D9596;
    
 }
+#btn{
+    background-color: #2D9596;
+    border: none;
+    border-top-right-radius: 17px;
+    border: 2px solid #2D9596;
+    color: #F1FADA;
+    cursor: pointer;
+    width: 60px;
+}
 ::placeholder{
     color: #F1FADA;
 }
 .intarnal2{
     padding: 10px;
+}
+.intarnal2{
+    display: flex;
 }
 .addtional{
     margin-bottom: 20px;
@@ -74,4 +86,11 @@ tr{
 
     font-size: 30px;
     line-height: 2;
+}
+/* ------- after js code-------- */
+
+.temprature{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
