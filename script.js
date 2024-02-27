@@ -1,5 +1,4 @@
-const url =
-  "https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=delhi";
+
 const options = {
   method: "GET",
   headers: {
@@ -9,11 +8,11 @@ const options = {
 };
 
 async function fetchData(city) {
-   
+  const url =
+  "https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=" + city;
   try {
-
-    const response = await fetch(url, options);
     cityName.innerHTML = city;
+    const response = await fetch(url, options);
     const result = await response.json();
     console.log(result);
 
@@ -27,16 +26,23 @@ async function fetchData(city) {
     temp.innerHTML = result.temp;
     // wind_degrees.innerHTML = result.wind_degrees;
     wind_speed.innerHTML = result.wind_speed;
-
   } catch (error) {
     console.error(error);
   }
 }
-fetchData("Delhi");
+fetchData("New Delhi");
 
-btn.addEventListener("click",(e)=>{
-    e.preventDefault();
+btn.addEventListener("click", (e) => {
+  e.preventDefault();
+  if(city.value === ""){
+    alert("enter City name!")
+  }else{
     fetchData(city.value);
+    console.log(fetchData);
     cityName.innerHTML = city;
     console.log("city searched.");
-})
+  }
+
+  
+  
+});
