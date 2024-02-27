@@ -11,7 +11,7 @@ async function fetchData(city) {
   const url =
   "https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=" + city;
   try {
-    cityName.innerHTML = city;
+    cityName.innerHTML = city.value;
     const response = await fetch(url, options);
     const result = await response.json();
     console.log(result);
@@ -40,9 +40,6 @@ btn.addEventListener("click", (e) => {
     fetchData(city.value);
     console.log(fetchData);
     cityName.innerHTML = city;
-    console.log("city searched.");
+    console.log("city searched." + city.value);
   }
-
-  
-  
 });

@@ -94,3 +94,6 @@ tr{
     justify-content: center;
     align-items: center;
 }
+#loading{
+    max-width: 30px;
+}
