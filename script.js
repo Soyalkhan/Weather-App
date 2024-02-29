@@ -11,7 +11,10 @@ async function fetchData(city) {
   const url =
   "https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=" + city;
   try {
-    cityName.innerHTML = city.value;
+    // Show loading GIF while fetching data
+    loading.style.display = 'block';
+
+    cityName.innerHTML = city;
     const response = await fetch(url, options);
     const result = await response.json();
     console.log(result);
@@ -26,11 +29,19 @@ async function fetchData(city) {
     temp.innerHTML = result.temp;
     // wind_degrees.innerHTML = result.wind_degrees;
     wind_speed.innerHTML = result.wind_speed;
+
+    // Hide loading GIF after data is fetched
+    loading.style.display = 'none';
   } catch (error) {
     console.error(error);
+
+     // Hide loading GIF in case of error
+     loading.style.display = 'none';
+
   }
+  return city;
 }
-fetchData("New Delhi");
+
 
 btn.addEventListener("click", (e) => {
   e.preventDefault();
@@ -38,8 +49,9 @@ btn.addEventListener("click", (e) => {
     alert("enter City name!")
   }else{
     fetchData(city.value);
-    console.log(fetchData);
-    cityName.innerHTML = city;
+    // console.log(fetchData);
+    
     console.log("city searched." + city.value);
   }
 });
+fetchData("New Delhi");
